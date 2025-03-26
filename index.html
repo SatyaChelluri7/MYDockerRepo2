@@ -7,8 +7,9 @@
 
 <body>
 <h1>Welcome to my web application</h1>
+	<button onclick="increasecount()">click me </button>
     <div class="wrapper">
-    
+    <h3>your increased count will appear here : <span id="count">0</span> </h3>
     <div class="block animatable bounceIn">bounceIn</div>
     <div class="block animatable bounceInLeft">bounceInLeft</div>
     <div class="block animatable bounceInRight">bounceInRight</div>
@@ -101,6 +102,10 @@
     jQuery(function($) {
   
   // Function which adds the 'animated' class to any '.animatable' in view
+	    function increasecount(){
+		    var count=$("#count").html();
+		    $("#count").html(++count)
+	    }
   var doAnimations = function() {
     
     // Calc current offset and get all animatables
